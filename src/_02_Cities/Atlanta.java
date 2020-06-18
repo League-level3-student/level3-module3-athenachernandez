@@ -2,13 +2,14 @@ package _02_Cities;
 
 public class Atlanta extends City{
 
-	public Atlanta(int population, double growthRate) {
-		super(population, growthRate);
+	public Atlanta(int population, double taxRate) {
+		super(population, taxRate);
 	}
 
 	@Override
 	double getAnnualTaxes() {
-		return 0;
+		double taxes = population * taxRate - (0.15 * population);
+		return taxes;
 	}
 
 }

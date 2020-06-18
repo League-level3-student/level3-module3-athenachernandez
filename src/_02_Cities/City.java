@@ -2,11 +2,11 @@ package _02_Cities;
 
 public abstract class City {
 	protected int population;
-	protected double growthRate;
+	protected double taxRate;
 	
-	public City(int population, double growthRate) {
+	public City(int population, double taxRate) {
 		this.population = population;
-		this.growthRate = growthRate;
+		this.taxRate = taxRate;
 	}
 	
 	public int getPopulation() {
@@ -14,7 +14,7 @@ public abstract class City {
 	}
 	
 	public double getGrowthRate() {
-		return growthRate;
+		return taxRate;
 	}
 	
 	abstract double getAnnualTaxes();
